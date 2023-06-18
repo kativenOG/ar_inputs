@@ -6,6 +6,6 @@
 (declare-fun x () S1)
 (declare-fun y () S1)
 (declare-fun f (S1) S1)
-(assert (let ((f1 (f x)) (f2 (f y)) (f3 (f f1)) (f4 (f f2))) (and (= f1 f2) (= f3 f1) (! (= f4 f3))) ))
+(assert (let ((f1 (f x)) (f2 (f y)) (f3 (f f1)) (f4 (f f2))) (and (= f1 f2) (= f3 f1) (not (= f4 f3))) ))
 (check-sat)
 (exit)
